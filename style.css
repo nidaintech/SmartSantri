@@ -1,0 +1,385 @@
+/* ===== RESET & BODY ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo img {
+  width: 64px;
+  height: auto;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #4CAF50; }
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-login {
+  background: #4CAF50;
+  color: #fff;
+}
+.btn-login:hover { background: #388E3C; }
+
+/* ===== HERO ===== */
+.hero {
+  background: #ffffff;
+  padding: 4rem 0;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #171A1F;
+}
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  color: #565D6D;
+}
+.btn-primary {
+  background: #3C9655;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+}
+.btn-primary:hover { background: #317A45; }
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+/* ===== SECTIONS ===== */
+section { padding: 4rem 0; }
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 2rem;
+  color: #171A1F;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 3rem 0 1.5rem;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.tab {
+  background: #f1f1f1;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+}
+.tab.active {
+  background: #3c9655;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===== GRID ===== */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 2rem;
+}
+
+/* ===== CARD ===== */
+.activity-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.activity-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.activity-content {
+  padding: 1rem 1.2rem 1.5rem;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+.badge {
+  background: #0e8a5f;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.date {
+  color: #555;
+  font-size: 0.9rem;
+}
+.date i {
+  margin-right: 4px;
+}
+.activity-content h3 {
+  font-size: 1.1rem;
+  margin: 0.4rem 0 0.6rem;
+}
+.activity-content p {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-content { flex-direction: column; text-align: center; }
+  .nav-container { flex-wrap: wrap; }
+}
+/* ===== Global ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.offer {
+  background: #f8f8f8;
+  padding: 4rem 0;
+}
+
+.offer h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  color: #171A1F;
+}
+
+/* ===== Grid 4 kolom sejajar ===== */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ===== Card ===== */
+.offer-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 2rem 1.8rem;
+  text-align: left;         /* sesuai contoh */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.offer-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+/* Ikon di atas */
+.offer-card .icon {
+  margin-bottom: 1.2rem;
+}
+.offer-card .icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Judul dan teks */
+.offer-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #171A1F;
+}
+
+.offer-card p {
+  font-size: 15px;
+  color: #565D6D;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+/* Tombol outline hijau */
+.btn-outline {
+  display: inline-flex;               /* ubah jadi flex agar mudah centering */
+  align-items: center;                /* vertikal tengah */
+  justify-content: center;            /* horizontal tengah */
+  padding: 0.35rem 0.7rem;
+  border: 1.5px solid #3C9655;
+  border-radius: 6px;
+  color: #3C9655;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background: #3C9655;
+  color: #fff;
+}
+
+
+/* ===== Responsif ===== */
+@media (max-width: 992px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== PROYEK SANTRI UNGGULAN ===== */
+.projects {
+  background: #f6faf7;
+  padding: 4rem 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.project-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.project-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-body h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #171A1F;
+}
+
+.project-body .author {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.project-body p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: auto;
+}
+
+/* === TOMBOL LIHAT PROYEK (Outline Hijau) === */
+.project-body .btn-outline {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+
+  padding: 0.5rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  border: 1.8px solid #16a34a;      /* hijau tailwind style */
+  color: #16a34a;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-body .btn-outline:hover {
+  background: #16a34a;
+  color: #fff;
+}
+
