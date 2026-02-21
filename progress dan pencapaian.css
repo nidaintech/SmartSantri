@@ -12,3 +12,173 @@ body { font-family: 'Poppins', sans-serif; background: #fff; color: #333; }
 .auth-btn .btn-login { padding:.4rem 1rem; border:1px solid #ddd; border-radius:6px; background:#f9f9f9;
   color:#333; font-weight:500; text-decoration:none; transition:background .3s; }
 .auth-btn .btn-login:hover { background:#eee; }
+
+/* ===== RINGKASAN PROGRES ===== */
+.container {
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.summary-section {
+    background-color: #f0fdf4; /* Warna hijau sangat muda sesuai gambar */
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.summary-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom sejajar */
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.stat-header .icon {
+    font-size: 1.2rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.stat-desc {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Responsif untuk layar kecil (HP) */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== TABLE SECTION ===== */
+.project-list-section {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+.table-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.table-container {
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    overflow: hidden; /* Agar border radius terlihat di ujung tabel */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background-color: #fff;
+    color: #888;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+td {
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    border-bottom: 1px solid #f9f9f9;
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Judul Proyek sedikit lebih tebal */
+td:first-child {
+    font-weight: 500;
+    max-width: 300px;
+    line-height: 1.4;
+}
+
+/* ===== STATUS BADGES ===== */
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-badge.selesai {
+    background-color: #166534; /* Hijau tua */
+    color: #fff;
+}
+
+.status-badge.sedang {
+    background-color: #f3f4f6; /* Abu-abu muda */
+    color: #374151;
+}
+
+.status-badge.tertunda {
+    background-color: #f9fafb;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto; /* Memungkinkan scroll horizontal pada HP */
+    }
+    table {
+        min-width: 800px;
+    }
+}

@@ -12,3 +12,166 @@ body { font-family: 'Poppins', sans-serif; background: #fff; color: #333; }
 .auth-btn .btn-login { padding:.4rem 1rem; border:1px solid #ddd; border-radius:6px; background:#f9f9f9;
   color:#333; font-weight:500; text-decoration:none; transition:background .3s; }
 .auth-btn .btn-login:hover { background:#eee; }
+
+/* ===== FORUM LAYOUT ===== */
+.forum-container {
+    display: flex;
+    height: calc(100vh - 70px); /* Menyesuaikan tinggi layar dikurangi navbar */
+    background: #fff;
+}
+
+/* Sidebar Saluran Diskusi */
+.sidebar-discussion {
+    width: 300px;
+    border-right: 1px solid #eee;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-discussion h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.channel-list {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.channel-item {
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: 0.3s;
+}
+
+.channel-item h4 { font-size: 0.95rem; margin-bottom: 2px; }
+.channel-item p { font-size: 0.8rem; color: #888; }
+.channel-item:hover, .channel-item.active { background: #f0fdf4; }
+.channel-item.active h4 { color: #16a34a; }
+
+/* Sidebar Footer Buttons */
+.sidebar-footer {
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.btn-side {
+    width: 100%;
+    text-align: left;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    background: #16a34a;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Area Chat */
+.chat-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.chat-header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-settings-chat {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+}
+
+.chat-messages {
+    padding: 2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Message Rows */
+.message-row { display: flex; gap: 12px; max-width: 80%; }
+.message-row.user { align-self: flex-end; text-align: right; }
+.message-row.mentor { align-self: flex-start; }
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message-content { display: flex; flex-direction: column; gap: 4px; }
+.sender-name { font-size: 0.85rem; font-weight: 600; color: #333; }
+
+.bubble {
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.mentor .bubble { background: #f1f5f9; color: #333; border-top-left-radius: 0; }
+.user .bubble { background: #16a34a; color: white; border-top-right-radius: 0; }
+
+.time { font-size: 0.75rem; color: #aaa; margin-top: 2px; }
+
+/* ===== CHAT INPUT STYLING ===== */
+.chat-input-container {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 15px;
+    background: #fff;
+}
+
+.chat-input-container input {
+    flex-grow: 1;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.chat-input-container input:focus {
+    border-color: #16a34a;
+}
+
+.chat-input-container button {
+    background: #16a34a;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-input-container button:hover {
+    background: #15803d;
+}
+
+/* Pastikan area pesan bisa scroll jika sudah penuh */
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px); /* Sesuaikan agar tidak tertutup input */
+}

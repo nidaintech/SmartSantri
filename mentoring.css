@@ -12,3 +12,255 @@ body { font-family: 'Poppins', sans-serif; background: #fff; color: #333; }
 .auth-btn .btn-login { padding:.4rem 1rem; border:1px solid #ddd; border-radius:6px; background:#f9f9f9;
   color:#333; font-weight:500; text-decoration:none; transition:background .3s; }
 .auth-btn .btn-login:hover { background:#eee; }
+
+/* ===== BIMBINGAN MENTOR ===== */
+.mentor-banner {
+    padding: 3rem 10%;
+    background-color: #fff;
+}
+.banner-card {
+    background-color: #f0fdf4;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+.banner-card h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #1a1a1a; }
+.banner-card p { color: #555; max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem; }
+.btn-schedule {
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ===== SESI KONSULTASI ===== */
+.consultation-section {
+    padding: 4rem 10%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 { font-size: 2rem; font-weight: 700; }
+
+.btn-outline-schedule {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #16a34a;
+    background: transparent;
+    color: #16a34a;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.consultation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.consultation-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 10px;
+}
+
+.card-top h3 { font-size: 1.1rem; font-weight: 700; line-height: 1.4; }
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge.yellow { background: #fef3c7; color: #92400e; }
+.badge.green { background: #dcfce7; color: #16a34a; }
+
+.mentor-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eee;
+}
+
+.mentor-info p { font-size: 0.9rem; color: #333; font-weight: 500; }
+
+.consult-detail {
+    margin-bottom: 1.5rem;
+}
+
+.consult-detail p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.card-actions.single-btn {
+    grid-template-columns: 1fr;
+}
+
+.btn-join {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-detail {
+    background: transparent;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+
+/* Styling Umum untuk Judul Kiri */
+.section-title-left {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+/* ===== FEEDBACK SECTION ===== */
+.feedback-section {
+    padding: 2rem 10% 4rem 10%;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feedback-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.mentor-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+}
+
+.avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mentor-meta h4 { font-size: 0.95rem; font-weight: 700; color: #333; }
+.mentor-meta span { font-size: 0.8rem; color: #888; }
+
+.feedback-text {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.feedback-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 1rem;
+}
+
+.feedback-footer .date { font-size: 0.8rem; color: #aaa; }
+.btn-link { 
+    text-decoration: none; 
+    color: #16a34a; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ===== ANNOUNCEMENT SECTION ===== */
+.announcement-section {
+    padding: 2rem 10% 6rem 10%;
+}
+
+.announcement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.announcement-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+}
+
+.announcement-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.date-label { font-size: 0.8rem; color: #bbb; display: block; margin-bottom: 1rem; }
+.announcement-card p { font-size: 0.9rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; }
+
+.read-more {
+    color: #16a34a;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .feedback-grid, .announcement-grid { grid-template-columns: 1fr; }
+}

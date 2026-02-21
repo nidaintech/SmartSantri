@@ -14,7 +14,7 @@
       <img src="images/smartsantri.jpg" alt="SmartSantri">
     </div>
     <nav class="nav-links">
-      <a href="dashboard.html">Dashboard</a>
+      <a href="dashboard.php">Dashboard</a>
       <a href="modulpembelajaran.html">Modul Pembelajaran</a>
       <a href="mentoring.html" >Mentoring</a>
       <a href="tips penelitian.html">Tips Penelitian</a>
@@ -26,3 +26,134 @@
     </div>
   </header>
 
+<main class="forum-container">
+    <aside class="sidebar-discussion">
+      <h2>Saluran Diskusi</h2>
+      <div class="channel-list">
+        <div class="channel-item active">
+          <h4>Riset Teknologi AI</h4>
+          <p>Apa saja langkah-langkah pene...</p>
+        </div>
+        <div class="channel-item">
+          <h4>Metode Penelitian Ilmiah</h4>
+          <p>Bagaimana cara menyusun hipo...</p>
+        </div>
+        <div class="channel-item">
+          <h4>Diskusi Tugas Coding</h4>
+          <p>Saya kesulitan dengan algoritma...</p>
+        </div>
+        <div class="channel-item">
+          <h4>Bimbingan Mentor Umum</h4>
+          <p>Jadwal konsultasi pekan ini.</p>
+        </div>
+        <div class="channel-item">
+          <h4>Proyek Sains & Teknologi</h4>
+          <p>Ide untuk proyek fisika...</p>
+        </div>
+        <div class="channel-item">
+          <h4>Forum Kajian Fiqih</h4>
+          <p>Pertanyaan seputar zakat.</p>
+        </div>
+        <div class="channel-item">
+          <h4>Klub Literasi Islam</h4>
+          <p>Diskusi buku baru Imam Ghazal...</p>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="btn-side"><i class="fa-solid fa-gear"></i> Settings</button>
+        <button class="btn-side"><i class="fa-solid fa-circle-question"></i> Help & Support</button>
+      </div>
+    </aside>
+
+    <section class="chat-area">
+      <div class="chat-header">
+        <h3>Riset Teknologi AI</h3>
+        <button class="btn-settings-chat"><i class="fa-solid fa-gear"></i></button>
+      </div>
+
+      <div class="chat-messages">
+        <div class="message-row mentor">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Mentor" class="chat-avatar">
+          <div class="message-content">
+            <span class="sender-name">Mentor Amin</span>
+            <div class="bubble">
+              Assalamualaikum, santri! Ada pertanyaan seputar riset teknologi AI?
+            </div>
+            <span class="time">10:00 AM</span>
+          </div>
+        </div>
+
+        <div class="message-row user">
+          <div class="message-content">
+            <span class="sender-name">Ahmad</span>
+            <div class="bubble">
+              Waalaikumussalam, Mentor. Saya ingin bertanya tentang perbedaan antara Machine Learning dan Deep Learning dalam konteks riset.
+            </div>
+            <span class="time">10:05 AM</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="User" class="chat-avatar">
+        </div>
+
+        <div class="message-row mentor">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Mentor" class="chat-avatar">
+          <div class="message-content">
+            <span class="sender-name">Mentor Amin</span>
+            <div class="bubble">
+              Baik, Machine Learning adalah cabang AI yang memungkinkan sistem belajar dari data tanpa pemrograman eksplisit. Deep Learning adalah sub-bidang ML yang menggunakan jaringan saraf tiruan berlapis-lapis untuk memproses data. Untuk riset, Deep Learning sering digunakan untuk data kompleks seperti gambar atau suara.
+            </div>
+            <span class="time">10:10 AM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="chat-input-container">
+        <input type="text" id="messageInput" placeholder="Ketik pesan Anda di sini...">
+        <button id="sendBtn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const sendBtn = document.getElementById('sendBtn');
+    const messageInput = document.getElementById('messageInput');
+    const chatMessages = document.querySelector('.chat-messages');
+
+    function sendMessage() {
+      const text = messageInput.value;
+      if (text.trim() !== "") {
+        // Buat elemen baris pesan baru
+        const messageRow = document.createElement('div');
+        messageRow.className = 'message-row user'; // Format sebagai user (kanan)
+
+        // Isi konten pesan (menggunakan format kodingan sebelumnya)
+        messageRow.innerHTML = `
+          <div class="message-content">
+            <span class="sender-name">Ahmad</span>
+            <div class="bubble">${text}</div>
+            <span class="time">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="User" class="chat-avatar">
+        `;
+
+        // Tambahkan ke area chat
+        chatMessages.appendChild(messageRow);
+        
+        // Reset input dan scroll ke bawah
+        messageInput.value = "";
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    }
+
+    // Klik tombol kirim
+    sendBtn.addEventListener('click', sendMessage);
+
+    // Tekan Enter untuk mengirim
+    messageInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>

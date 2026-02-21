@@ -1,3 +1,12 @@
+
+<?php
+session_start();
+// JIKA TIDAK ADA SESSION, PAKSA BALIK KE LOGIN
+if (!isset($_SESSION['nama_user'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
